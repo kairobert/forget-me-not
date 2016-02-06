@@ -8,7 +8,7 @@ D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/src/em_cmu.c \
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/src/em_emu.c \
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/src/em_gpio.c \
 ../emlib/em_lcd.c \
-C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/emlib/src/em_letimer.c \
+../emlib/em_letimer.c \
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/src/em_rtc.c \
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/src/em_system.c 
 
@@ -60,7 +60,7 @@ emlib/em_lcd.o: ../emlib/em_lcd.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-emlib/em_letimer.o: C:/SiliconLabs/SimplicityStudio/v3/developer/sdks/efm32/v2/emlib/src/em_letimer.c
+emlib/em_letimer.o: ../emlib/em_letimer.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GNU ARM C Compiler'
 	arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m3 -mthumb '-DEFM32GG990F1024=1' '-DDEBUG=1' -I"D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/CMSIS/Include" -I"D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/kits/common/bsp" -I"D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc" -I"D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/kits/common/drivers" -I"D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include" -I"D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/kits/EFM32GG_STK3700/config" -O0 -Wall -c -fmessage-length=0 -mno-sched-prolog -fno-builtin -ffunction-sections -fdata-sections -std=c99 -MMD -MP -MF"emlib/em_letimer.d" -MT"emlib/em_letimer.o" -o "$@" "$<"

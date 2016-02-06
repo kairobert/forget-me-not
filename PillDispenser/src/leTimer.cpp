@@ -12,7 +12,7 @@
 void leTimerSetup(){
 
 	/* 32 clock division to save energy */
-	CMU_ClockDivSet(cmuClock_RTC, cmuClkDiv_32);
+//	CMU_ClockDivSet(cmuClock_LETIMER0, cmuClkDiv_32);
 
 	/* Enable LE timer */
 	CMU_ClockEnable(cmuClock_LETIMER0, true);
@@ -26,7 +26,7 @@ void leTimerSetup(){
 	LETIMER_Init(LETIMER0, &letimerInit);
 
 	/* Setting timer interrupt time to 1 second */
-	LETIMER_CompareSet(LETIMER0, 0, (LE_TIMER_CLOCK_FREQ/ LE_TIMER_CLOCK_FREQ));
+	LETIMER_CompareSet(LETIMER0, 0, (LE_TIMER_CLOCK_FREQ/ 1));
 
 	/*Enabling interrupt */
 	LETIMER_IntEnable(LETIMER0, LETIMER_IF_COMP0);

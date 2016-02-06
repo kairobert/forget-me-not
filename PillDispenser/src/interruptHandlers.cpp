@@ -24,6 +24,7 @@ void RTC_IRQHandler(void)
 }
 
 void LETIMER0_IRQHandler(void){
+	LETIMER_IntClear(LETIMER0, LETIMER_IFC_COMP0);
 	SegmentLCD_Write(sentence[wordPtr]);
 	wordPtr++;
 	if(wordPtr == 4){wordPtr = 0;}

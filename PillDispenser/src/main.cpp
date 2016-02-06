@@ -34,7 +34,7 @@ int main(void)
   gpioSetup();
   SegmentLCD_Init(false); //init the segment lcd, bool used to check if power supply i low
   rtcSetup();
-
+  leTimerSetup();
   /* Infinite loop */
   while (1) {
 	  EMU_EnterEM2(true);
