@@ -7,6 +7,7 @@
 
 #include "em_cmu.h"
 #include "em_gpio.h"
+#include "stepmotor.h"
 
 void gpioSetup(){
 
@@ -21,6 +22,8 @@ void gpioSetup(){
 
 	/* Set rising edge interrupt for both ports */
 	GPIO_IntConfig(gpioPortB, 9, true, false, true);
+
+	motor_gpioSetup(); //set up the output pins for the step motor
 
 	/* Enable interrupt in core for even and odd gpio interrupts */
 	NVIC_ClearPendingIRQ(GPIO_EVEN_IRQn);
