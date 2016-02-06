@@ -16,6 +16,12 @@
  ******************************************************************************/
 #include "em_device.h"
 #include "em_chip.h"
+#include "em_emu.h"
+#include "rtc.h"
+#include "gpio.h"
+#include "interruptHandlers.h"
+#include "leTimer.h"
+#include "segmentlcd.h"
 
 /**************************************************************************//**
  * @brief  Main function
@@ -25,7 +31,14 @@ int main(void)
   /* Chip errata */
   CHIP_Init();
 
+  gpioSetup();
+  SegmentLCD_Init(false); //init the segment lcd, bool used to check if power supply i low
+  rtcSetup();
+  leTimerSetup();
+  leTimerTurnOff();
+
   /* Infinite loop */
   while (1) {
+	  EMU_EnterEM2(true);
   }
 }
