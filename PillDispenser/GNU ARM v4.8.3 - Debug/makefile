@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include src/subdir.mk
 -include emlib/subdir.mk
+-include Drivers/subdir.mk
 -include CMSIS/efm32gg/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -46,7 +47,7 @@ all: PillDispenser.axf
 PillDispenser.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU ARM C++ Linker'
-	arm-none-eabi-g++ -g -gdwarf-2 -mcpu=cortex-m3 -mthumb -T "PillDispenser.ld" --specs=nosys.specs -Xlinker --gc-sections -Xlinker -Map="PillDispenser.map" --specs=nano.specs -o PillDispenser.axf "./src/empty_project.o" "./src/gpio.o" "./src/interruptHandlers.o" "./src/leTimer.o" "./src/rtc.o" "./emlib/em_cmu.o" "./emlib/em_emu.o" "./emlib/em_gpio.o" "./emlib/em_letimer.o" "./emlib/em_rtc.o" "./emlib/em_system.o" "./CMSIS/efm32gg/startup_efm32gg.o" "./CMSIS/efm32gg/system_efm32gg.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
+	arm-none-eabi-g++ -g -gdwarf-2 -mcpu=cortex-m3 -mthumb -T "PillDispenser.ld" --specs=nosys.specs -Xlinker --gc-sections -Xlinker -Map="PillDispenser.map" --specs=nano.specs -o PillDispenser.axf "./src/gpio.o" "./src/interruptHandlers.o" "./src/leTimer.o" "./src/main.o" "./src/rtc.o" "./emlib/em_cmu.o" "./emlib/em_emu.o" "./emlib/em_gpio.o" "./emlib/em_lcd.o" "./emlib/em_letimer.o" "./emlib/em_rtc.o" "./emlib/em_system.o" "./Drivers/segmentlcd.o" "./CMSIS/efm32gg/startup_efm32gg.o" "./CMSIS/efm32gg/system_efm32gg.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

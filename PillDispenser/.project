@@ -27,6 +27,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>em_letimer.c</name>
+			<type>1</type>
+			<location>D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/src/em_letimer.c</location>
+		</link>
+		<link>
 			<name>emlib/em_cmu.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/emlib/src/em_cmu.c</locationURI>

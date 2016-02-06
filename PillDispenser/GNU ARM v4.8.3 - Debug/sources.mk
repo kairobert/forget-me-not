@@ -26,5 +26,6 @@ C_UPPER_DEPS :=
 SUBDIRS := \
 src \
 emlib \
+Drivers \
 CMSIS/efm32gg \
 

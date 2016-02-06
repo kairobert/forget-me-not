@@ -21,6 +21,7 @@
 #include "gpio.h"
 #include "interruptHandlers.h"
 #include "leTimer.h"
+#include "segmentlcd.h"
 
 /**************************************************************************//**
  * @brief  Main function
@@ -31,7 +32,9 @@ int main(void)
   CHIP_Init();
 
   gpioSetup();
+  SegmentLCD_Init(false); //init the segment lcd, bool used to check if power supply i low
   rtcSetup();
+
   /* Infinite loop */
   while (1) {
 	  EMU_EnterEM2(true);

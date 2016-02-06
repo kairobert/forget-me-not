@@ -23,10 +23,10 @@ void leTimerSetup(){
 
 
 	/* Initialising LE timer */
-	void LETIMER_Init(LETIMER0, &letimerInit);
+	LETIMER_Init(LETIMER0, &letimerInit);
 
 	/* Setting timer interrupt time to 1 second */
-	void LETIMER_CompareSet(LETIMER0, 0, (LE_TIMER_CLOCK_FREQ/ LE_TIMER_CLOCK_FREQ));
+	LETIMER_CompareSet(LETIMER0, 0, (LE_TIMER_CLOCK_FREQ/ LE_TIMER_CLOCK_FREQ));
 
 	/*Enabling interrupt */
 	LETIMER_IntEnable(LETIMER0, LETIMER_IF_COMP0);
@@ -54,10 +54,10 @@ void leTimerTurnOn(){
 	letimerInit.enable   = false;  /* Do not start LE timer after initialization is complete. */
 
 	/* Initialising LE timer */
-	void LETIMER_Init(LETIMER0, &letimerInit);
+	LETIMER_Init(LETIMER0, &letimerInit);
 
 	/* Setting timer interrupt time to 1 second */
-	void LETIMER_CompareSet(LETIMER0, 0, (LE_TIMER_CLOCK_FREQ/ LE_TIMER_CLOCK_FREQ));
+	LETIMER_CompareSet(LETIMER0, 0, (LE_TIMER_CLOCK_FREQ/ LE_TIMER_CLOCK_FREQ));
 
 	/*Enabling interrupt */
 	LETIMER_IntEnable(LETIMER0, LETIMER_IF_COMP0);

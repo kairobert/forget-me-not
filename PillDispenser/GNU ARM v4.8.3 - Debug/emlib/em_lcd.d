@@ -1,5 +1,5 @@
-src/leTimer.o: ../src/leTimer.cpp \
- D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_letimer.h \
+emlib/em_lcd.o: ../emlib/em_lcd.c \
+ D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_lcd.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/em_device.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/efm32gg990f1024.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/CMSIS/Include/core_cm3.h \
@@ -53,11 +53,10 @@ src/leTimer.o: ../src/leTimer.cpp \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/efm32gg_uart.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/efm32gg_af_ports.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/efm32gg_af_pins.h \
- D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_cmu.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_assert.h \
  D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_bus.h
 
-D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_letimer.h:
+D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_lcd.h:
 
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/em_device.h:
 
@@ -164,8 +163,6 @@ D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/efm32gg_af_ports.h:
 
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/Device/SiliconLabs/EFM32GG/Include/efm32gg_af_pins.h:
-
-D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_cmu.h:
 
 D:/Programs/SimplicityStudio/developer/sdks/efm32/v2/emlib/inc/em_assert.h:
 
