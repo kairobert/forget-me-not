@@ -9,6 +9,7 @@
 #include "em_rtc.h"
 #include "em_letimer.h"
 #include "em_gpio.h"
+#include "leTimer.h"
 #include "segmentlcd.h"
 
 char *sentence[] = {"KAI", "TAKE", "YOUR", "MEDS."};
@@ -18,8 +19,7 @@ void RTC_IRQHandler(void)
 {
 	/* Clear interrupt source */
 	RTC_IntClear(RTC_IFC_COMP0);
-
-	GPIO_PinOutToggle(gpioPortC, 0);
+	leTimerTurnOn();
 
 }
 
@@ -33,7 +33,10 @@ void LETIMER0_IRQHandler(void){
 
 void GPIO_EVEN_IRQHandler(void)
 {
-
+	if(GPIO_IntGet() & 1){
+		GPIO_IntClear(1 << 0);
+		leTimerTurnOff();
+	}
 }
 
 

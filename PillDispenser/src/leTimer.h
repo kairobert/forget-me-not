@@ -10,5 +10,6 @@
 
 
 void leTimerSetup();
-
+void leTimerTurnOff();
+void leTimerTurnOn();
 #endif /* LETIMER_H_ */

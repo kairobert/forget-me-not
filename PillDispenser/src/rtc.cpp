@@ -28,7 +28,7 @@ void rtcSetup(){
 	RTC_Init(&rtcInit);
 
 	/* Interrupt every minute */
-	RTC_CompareSet(0, ((RTC_FREQ / CLOCK_DIVISION) *3600 ) - 1 );
+	RTC_CompareSet(0, ((RTC_FREQ / CLOCK_DIVISION) * 10 ) - 1 );
 
 	/* Enable interrupt */
 	NVIC_EnableIRQ(RTC_IRQn);
