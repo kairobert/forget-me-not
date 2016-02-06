@@ -16,6 +16,11 @@
  ******************************************************************************/
 #include "em_device.h"
 #include "em_chip.h"
+#include "em_emu.h"
+#include "rtc.h"
+#include "gpio.h"
+#include "interruptHandlers.h"
+#include "leTimer.h"
 
 /**************************************************************************//**
  * @brief  Main function
@@ -25,7 +30,10 @@ int main(void)
   /* Chip errata */
   CHIP_Init();
 
+  gpioSetup();
+  rtcSetup();
   /* Infinite loop */
   while (1) {
+	  EMU_EnterEM2(true);
   }
 }
